@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em;
+    font-size: clamp(0.5em, 20px, 2em);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator {
+    border: solid darkslategrey 1px;
+    height: 90vh;
+    width: 90vw;
+    margin: 1em;
+}
+
+
+@media only screen and (min-width: 700px) {
+    #calculator {
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #calculator {
+        width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #calculator {
+        width: 30vw;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 1em;
+}
+
+.grid-item {
+    /* border: 1px solid black; */
+    /* padding: 1em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.screen {
+    grid-column: 1/5;
+    grid-row: 1/3;
+}
+
+.enter {
+    grid-column: 4/5;
+    grid-row: 6/8;
+}
+
+.zero {
+  grid-column: 1/3;
+  grid-row: 7/8;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 1.7em;
+    margin: 0px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#C {
+    background-color: #e29578;
+    border-radius: 2px;
+    border: solid 1px #e29578;
+}
+#times, #minus, #modulo, #plus, #divide, #decimal {
+    background-color: #34a0a4;
+    border-radius: 2px;
+    border: solid 1px #34a0a4;
+}
+
+#times:hover, #minus:hover, #percent:hover, #plus:hover, #divide:hover, #modulo:hover {
+    color: white;
+    background-color: blue;
+    border: 1px blue solid;
+}
+
+#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+    background-color: #52b69a;
+    border-radius: 2px;
+    border: 1px solid #52b69a;
+}
+
+#enter {
+    background-color: #168aad;
+    border: solid 1px #168aad;
+    border-radius: 2px;
+}
+
+#result {
+    font-size: 2em;
+}
+
+#zero:hover, #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover, #decimal:hover, #enter:hover {
+    color: white;
+    background-color: lime;
+    border-color: lime;
+}
+
+#C:hover {
+    color: white;
+    background-color: #FF3131;
+    border-color: #FF3131;
+}
